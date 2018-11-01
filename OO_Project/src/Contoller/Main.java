@@ -22,7 +22,15 @@ public class Main {
             System.out.println("Player " + p.getNumber() + " has cards: " + p.getPersonalCard(0) + " and " + p.getPersonalCard(1));
         }
 
-        //TODO: implement betting functionality.
+        //TODO: Get players bets.
+        //TODO: Place bets. (Note that this involves revisiting players who bet earlier in the round when someone raises)
+        //TODO: Deal flop.
+        //TODO: Betting round after flop.
+        //TODO: Deal turn.
+        //TODO: Betting round after turn.
+        //TODO: Deal river.
+        //TODO: Betting round after river.
+        //TODO: Compare values of hands to find the winner
 
     }
 }

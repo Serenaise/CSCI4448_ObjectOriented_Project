@@ -3,6 +3,7 @@ import java.util.*;
 
 public class Screen {
 
+    // Displays the Welcome Screen and gets the number of players
     public int getNumberOfPlayers(){
         System.out.println("Welcome!");
         System.out.println("Enter number of players:");
@@ -39,6 +40,10 @@ public class Screen {
         return numberOfPlayers;
     }
 
-
+    // Descriptions of each screen can be found in the UI mockups from Part 2 of this project.
+    //TODO: display Bet Screen and get type of bet from players
+    //TODO: display Raise Screen and get raise value
+    //TODO: display the Hand Screen and get the hands that each player wants to play
+    //TODO: display the Winner Screen
 
 }

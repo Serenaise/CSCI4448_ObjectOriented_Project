@@ -11,25 +11,15 @@ public class Player {
         this.personalCards = new Card[2];
     }
 
-    public int getNumber() {
-        return number;
-    }
+    public int getNumber() { return number; }
 
-    public Card[] getHand() {
-        return hand;
-    }
+    public Card[] getHand() { return hand; }
 
-    public void setHand(Card[] hand) {
-        this.hand = hand;
-    }
+    public void setHand(Card[] hand) { this.hand = hand; }
 
-    public Card[] getPersonalCards() {
-        return personalCards;
-    }
+    public Card[] getPersonalCards() { return personalCards; }
 
     public Card getPersonalCard(int i){ return personalCards[i]; }
 
-    public void setPersonalCards(Card[] personalCards) {
-        this.personalCards = personalCards;
-    }
+    public void setPersonalCards(Card[] personalCards) { this.personalCards = personalCards; }
 }

@@ -8,17 +8,17 @@ public class Dealer {
         this.deck = new Deck();
     }
 
-    public void dealBoard(RoundOfPlay round){
+    public void dealBoard(Board board, RoundOfPlay round){
         int roundNumber = round.getRoundNumber();
         if(roundNumber == 1){
-            this.dealFlop();
+            this.dealFlop(board);
             round.incrementRoundNumber();
         }
         else if(roundNumber == 2) {
-            this.dealTurn();
+            this.dealTurn(board);
             round.incrementRoundNumber();
         } else {
-            this.dealRiver();
+            this.dealRiver(board);
             round.incrementRoundNumber();
         }
     }
@@ -33,13 +33,15 @@ public class Dealer {
         round.incrementRoundNumber();
 
     }
-    private void dealFlop(){
-
+    private void dealFlop(Board board){
+        board.updateBoard(deck.getCard());
+        board.updateBoard(deck.getCard());
+        board.updateBoard(deck.getCard());
     }
-    private void dealTurn(){
-
+    private void dealTurn(Board board){
+        board.updateBoard(deck.getCard());
     }
-    private void dealRiver(){
-
+    private void dealRiver(Board board){
+        board.updateBoard(deck.getCard());
     }
 }
