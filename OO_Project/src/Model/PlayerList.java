@@ -19,6 +19,7 @@ public class PlayerList {
         return players.get(i);
     }
     public int getNumberOfPlayers(){
+        // returns the number of players between 1 and 5 not index.
         return players.size();
     }
     public ArrayList<Player> removePlayer(int playerNumber){
@@ -27,6 +28,7 @@ public class PlayerList {
             Player p = players.get(i);
             if (p.getNumber()==playerNumber){
                 players.remove(p);
+                sz = sz - 1;
             }
         }
         return players;

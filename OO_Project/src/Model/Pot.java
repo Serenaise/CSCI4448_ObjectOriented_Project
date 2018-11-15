@@ -9,4 +9,7 @@ public class Pot {
     public void raisePot(int raise){
         this.value = this.value + raise;
     }
+    public String toString(){
+        return Integer.toString(value);
+    }
 }

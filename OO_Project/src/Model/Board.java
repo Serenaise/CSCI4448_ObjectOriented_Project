@@ -9,13 +9,26 @@ public class Board {
         this.board = new ArrayList<Card>();
     }
 
-    public ArrayList<Card> updateBoard(Card c){
+    public void updateBoard(Card c){
         this.board.add(c);
-        return this.board;
 
     }
     public ArrayList<Card> getBoard() {
         return board;
+    }
+
+    public String toString(){
+        //TODO: Make sure this works.
+        StringBuilder retVal = new StringBuilder();
+        if (board.size() == 0){
+            retVal.append("Empty");
+        }
+        else {
+            for (Card aBoard : board) {
+                retVal.append(aBoard.toString());
+            }
+        }
+        return retVal.toString();
     }
 
 }
