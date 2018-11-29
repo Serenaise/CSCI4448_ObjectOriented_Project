@@ -48,7 +48,8 @@ public class Card implements Cloneable, Comparable<Card> {
 //    public int compare(Card a, Card b){
 //        return Integer.compare(a.getValue(), b.getValue());
 //    }
-        public int compareTo(Card c){
+    @Override
+    public int compareTo(Card c){
         return Integer.compare(this.value, c.getValue());
     }
 }

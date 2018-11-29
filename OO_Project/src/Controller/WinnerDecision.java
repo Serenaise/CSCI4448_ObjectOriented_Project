@@ -8,14 +8,14 @@ import Model.PlayerList;
 import java.util.*;
 
 /**
- * WinnerDecision does stuff.
+ * WinnerDecision decides which player won the game.
  *
  */
 public class WinnerDecision {
     /**
-     * Method description.
-     * @param players
-     * @return
+     * Determines which player won the game based on the relative strengths of their hands.
+     * @param players the players that are winner candidates
+     * @return Returns the winning player.
      */
     public static Player excute(PlayerList players){
         Player winner = players.getPlayer(0);

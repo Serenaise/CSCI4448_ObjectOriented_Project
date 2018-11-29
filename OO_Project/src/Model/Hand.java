@@ -27,7 +27,7 @@ public class Hand {
 
     /**
      * Creates a new hand object with rank 0 and cards list as specified.
-     * @param cards
+     * @param cards ArrayList of cards to initialize the hand with
      */
     public Hand(ArrayList<Card> cards){
         this.cards = cards;

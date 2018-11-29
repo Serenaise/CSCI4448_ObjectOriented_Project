@@ -4,10 +4,17 @@ import Model.*;
 import View.Screen;
 import java.io.IOException;
 
-
+/**
+ * The BettingRound class runs a round of betting in which players raise, call, and/or fold
+ */
 public class BettingRound {
 
-
+    /**
+     * Runs a betting round.
+     * @param game the current state of the game
+     * @param view the view used to get the players choice for bet types and values
+     * @return Returns the amount that each player must surrender to the pot.
+     */
     public static int execute(Game game, Screen view){
         PlayerList players = game.getPlayers();
         Board board = game.getBoard();
@@ -18,7 +25,6 @@ public class BettingRound {
         while (playerIndex < players.getNumberOfPlayers()){
             int bet = view.getBet(playerIndex, players, board, currentBet,pot,round);
             if (bet == 1){
-                //TODO: If we are keeping track of how much money the player has we should subtract from how much they have.
                 int raiseValue = view.getRaiseValue();
 //                System.out.println("You chose to raise by " + raiseValue);
                 currentBet = currentBet + raiseValue;
@@ -31,7 +37,6 @@ public class BettingRound {
             }
             else if (bet == 2){
 //                System.out.println("You chose to call");
-                //TODO: Take bet value from player
                 playerIndex++;
             }
             else {
@@ -39,7 +44,6 @@ public class BettingRound {
                 players.removePlayer(playerIndex+1);
             }
 
-            // TODO: Figure out how to clear the screen.
             try {
                 Runtime.getRuntime().exec("clear");
             } catch (IOException e) {
