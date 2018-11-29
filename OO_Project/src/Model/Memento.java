@@ -1,40 +1,25 @@
 package Model;
 
+/**
+ * Holds a game state.
+ */
 public class Memento {
-    private PlayerList players;
-    private Pot pot;
-    private Board board;
-    private RoundOfPlay round;
+    private Game state;
 
-    public PlayerList getPlayers() {
-        return players;
+    /**
+     * Creates a memento with the state specified.
+     * @param state the state to create the memento with.
+     */
+    public Memento(Game state){
+        this.state = state;
     }
 
-    public void setPlayers(PlayerList players) {
-        this.players = players;
+    /**
+     * Gets the state stored in the memento.
+     * @return the state from the memento as a Game object.
+     */
+    public Game getState(){
+        return state;
     }
 
-    public Pot getPot() {
-        return pot;
-    }
-
-    public void setPot(Pot pot) {
-        this.pot = pot;
-    }
-
-    public Board getBoard() {
-        return board;
-    }
-
-    public void setBoard(Board board) {
-        this.board = board;
-    }
-
-    public RoundOfPlay getRound() {
-        return round;
-    }
-
-    public void setRound(RoundOfPlay round) {
-        this.round = round;
-    }
 }
